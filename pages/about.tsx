@@ -5,13 +5,11 @@ import styles from "@/styles/Home.module.css"
 import Link from "next/link"
 import { LayoutNavBar } from "@/components/NavBar"
 
-const inter = Inter({ subsets: ["latin"] })
-
-export default function Home() {
+export default function About() {
     return (
         <>
             <div className={styles.center}>
-                <h1 className={styles.title}>Aimy Site</h1>
+                <h1 className={styles.title}>About me</h1>
                 <Image
                     alt="logo"
                     height={100}
@@ -19,7 +17,7 @@ export default function Home() {
                     src="/favicon.ico"
                 ></Image>
             </div>
-            <Link href="/about">About me</Link>
+            <Link href="/">go home</Link>
         </>
     )
 }
