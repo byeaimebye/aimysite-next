@@ -1,17 +1,19 @@
 import Head from "next/head"
 import Image from "next/image"
 import { Inter } from "@next/font/google"
-import styles from "@/styles/Home.module.css"
 import Link from "next/link"
-import { LayoutNavBar } from "@/components/NavBar"
+import { Button, Card, Text } from "@nextui-org/react"
+import { ImageCard } from "../components/card/imageCard"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
     return (
         <>
-            <div className={styles.center}>
-                <h1 className={styles.title}>Aimy Site</h1>
+            <div>
+                <Text color="white" size={44}>
+                    Aimy Site
+                </Text>
                 <Image
                     alt="logo"
                     height={100}
@@ -19,7 +21,12 @@ export default function Home() {
                     src="/favicon.ico"
                 ></Image>
             </div>
-            <Link href="/about">About me</Link>
+            <Link href="/pokeapi">
+                <ImageCard
+                    title="PokeApi"
+                    subTitle="Typical PokeApi with Next, nothing new but you know."
+                />
+            </Link>
         </>
     )
 }

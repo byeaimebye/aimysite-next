@@ -1,10 +1,9 @@
 import React from "react"
-import styles from "./MainLayout.module.css"
 import { LayoutNavBar } from "../NavBar"
 import Head from "next/head"
 const MainLayout = ({ children }: any) => {
     return (
-        <div className={styles.main}>
+        <div>
             <LayoutNavBar />
             <Head>
                 <title>Aimy site</title>
@@ -18,7 +17,7 @@ const MainLayout = ({ children }: any) => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={styles.main}>{children}</main>
+            <main style={{ height: "100vh", padding: "35px" }}>{children}</main>
         </div>
     )
 }
